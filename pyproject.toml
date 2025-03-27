@@ -1,19 +1,20 @@
-[project]
+[tool.poetry]
 name = "backend-takehome"
 version = "0.1.0"
 description = "A CLI tool for fetching and filtering PubMed research papers."
-authors = [
-    {name = "GauriRaghuvanshi",email = "gauriraghuvanshi03@gmail.com"}
-]
-license = {text = "MIT"}
+authors = ["Gauri Raghuvanshi <gauriraghuvanshi03@gmail.com>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "requests (>=2.32.3,<3.0.0)",
-    "pandas (>=2.2.3,<3.0.0)"
-]
+packages = [{include = "backend_takehome"}]
 
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14" 
+requests = "^2.32.3"
+pandas = "^2.2.3"
+
+[tool.poetry.scripts]
+get-papers-list = "backend_takehome.main:main"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
