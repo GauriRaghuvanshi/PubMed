@@ -21,34 +21,34 @@ This CLI tool fetches research papers from PubMed based on a given query, extrac
 # Steps
 
 1. Clone the repository:
-   git clone <repository-url>
-   cd backend-takehome
+   - git clone <repository-url>
+   - cd backend-takehome
 
 2. Install dependencies using Poetry:
-   poetry install
+   - poetry install
 
 3. Activate the Poetry environment:
-   poetry shell
+   - poetry shell
 
 # Usage
 
 1. Fetch papers from PubMed and display results in the terminal:
-   poetry run get-papers-list "your search query"
+   - poetry run get-papers-list "your search query"
 
 2. Save the results to a CSV file:
-   poetry run get-papers-list "your search query" -f results.csv
+   - poetry run get-papers-list "your search query" -f results.csv
 
 3. Enable debug mode:
-   poetry run get-papers-list "your search query" -d
+   - poetry run get-papers-list "your search query" -d
 
 # Example
 
 1. poetry run get-papers-list "Machine Learning in Healthcare" -f output.csv
-   (This will fetch research papers related to "Machine Learning in Healthcare" and save them in output.csv.)
+   - (This will fetch research papers related to "Machine Learning in Healthcare" and save them in output.csv.)
 
 # Dependencies
 
-This project uses the following libraries:
+- This project uses the following libraries:
 
 1. requests - For making API requests.
 
@@ -58,4 +58,4 @@ This project uses the following libraries:
 
 # License
 
-This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
