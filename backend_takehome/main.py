@@ -49,6 +49,7 @@ def filter_non_academic_authors(paper_details, debug=False):
 
         non_academic_authors = []
         company_affiliations = []
+        corresponding_author_email = []
 
         for author in author_list:
             affiliation = author.get("affiliation", "")
@@ -56,7 +57,7 @@ def filter_non_academic_authors(paper_details, debug=False):
                 non_academic_authors.append(author.get("name", "Unknown"))
                 company_affiliations.append(affiliation)
 
-        results.append([paper_id, title, pub_date, ", ".join(non_academic_authors), ", ".join(company_affiliations)])
+        results.append([paper_id, title, pub_date, ", ".join(non_academic_authors), ", ".join(company_affiliations), ", ".join(corresponding_author_email)])
 
     if debug:
         print(f"Filtered Non-Academic Authors: {results}")
@@ -64,7 +65,7 @@ def filter_non_academic_authors(paper_details, debug=False):
     return results
 
 def save_to_csv(results, filename):
-    df = pd.DataFrame(results, columns=["PubmedID", "Title", "Publication Date", "Non-academic Author(s)", "Company Affiliation(s)"])
+    df = pd.DataFrame(results, columns=["PubmedID", "Title", "Publication Date", "Non-academic Author(s)", "Company Affiliation(s)", "Corresponding Author Email"])
     df.to_csv(filename, index=False)
     print(f"Results saved to {filename}")
 
@@ -84,7 +85,7 @@ def main():
     if args.file:
         save_to_csv(filtered_results, args.file)
     else:
-        print(pd.DataFrame(filtered_results, columns=["PubmedID", "Title", "Publication Date", "Non-academic Author(s)", "Company Affiliation(s)"]))
+        print(pd.DataFrame(filtered_results, columns=["PubmedID", "Title", "Publication Date", "Non-academic Author(s)", "Company Affiliation(s)", "Corresponding Author Email"]))
 
 if __name__ == "__main__":
     main()
