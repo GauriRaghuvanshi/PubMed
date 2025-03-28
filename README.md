@@ -69,12 +69,7 @@ This CLI tool fetches research papers from PubMed based on a given query, extrac
 
 4. Poetry: Streamlined dependency management and packaging. 
 
-5. PubMed Entrez API: Accessed for fetching research data. 
-- https://www.ncbi.nlm.nih.gov/books/NBK25500/
-
-- These technologies were integrated strategically to improve workflow efficiency and data handling while ensuring modular and scalable implementation.
-
-6. LLM Tool - ChatGPT
+5. LLM Tool - ChatGPT
 
 - Issue: PowerShell script execution is restricted, preventing venv\Scripts\activate from running.
 - Solution: Used Set-ExecutionPolicy Unrestricted -Scope Process to temporarily allow script execution.
@@ -84,6 +79,7 @@ This CLI tool fetches research papers from PubMed based on a given query, extrac
 - Solution: Installed Pandas in the correct environment and selected the appropriate Python interpreter in VS Code.
 - https://chatgpt.com/share/67e668b2-12d0-800d-a86b-d7264438715d
 
+- These technologies were integrated strategically to improve workflow efficiency and data handling while ensuring modular and scalable implementation.
 
 # License
 
