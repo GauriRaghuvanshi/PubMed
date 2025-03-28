@@ -76,11 +76,11 @@ This CLI tool fetches research papers from PubMed based on a given query, extrac
 
 6. LLM Tool - ChatGPT
 
-1. Issue: PowerShell script execution is restricted, preventing venv\Scripts\activate from running.
+- Issue: PowerShell script execution is restricted, preventing venv\Scripts\activate from running.
 - Solution: Used Set-ExecutionPolicy Unrestricted -Scope Process to temporarily allow script execution.
 - https://chatgpt.com/share/67e6686e-486c-800d-be11-cda308896cbc
 
-2. Issue: VS Code's Pylance couldn't detect Pandas due to environment mismatch.
+- Issue: VS Code's Pylance couldn't detect Pandas due to environment mismatch.
 - Solution: Installed Pandas in the correct environment and selected the appropriate Python interpreter in VS Code.
 - https://chatgpt.com/share/67e668b2-12d0-800d-a86b-d7264438715d
 
